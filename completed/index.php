@@ -49,7 +49,6 @@
 				<!-- /Checkbox Hack markup -->
 				<nav>
 					<ul>
-						<li><a href="index.html">Home</a></li>
 						<li><a href="#portfolio">Portfolio</a></li>
 						<li><a href="#resume">Resume</a></li>
 						<li><a href="./">LinkedIn Profile</a></li> <!-- No destination yet -->
@@ -60,7 +59,7 @@
 
 			</section>
 		</div>
-		<div id="container-header" >
+		<div id="container-header">
 			<header id="masthead" class="wrapper">
 				
 				<h2>
@@ -103,7 +102,7 @@
 			<header>
 				<h3>My Portfolio</h3>
 				<p>
-					Lastest Stuff. See Full Porfolio <a href="portfolio.html">here</a>
+					Lastest Stuff. See Full Porfolio <a href="">here</a>
 				</p>
 			</header>
 
@@ -204,13 +203,13 @@
 	</article>
 </div>
 <div id="container-footer">
-	<form id="contact" class="has-error">
+	<form id="contact">
 		<fieldset class="wrapper">
 			<legend>Contact</legend>
 			<ul class="group">
 				<li class="name">
 					<label for="name">Your Name</label>
-					<input type="text" id="name" name="name" required="required" />
+					<input type="text" id="name" name="name" />
 				</li>
 				<li class="email">
 					<label for="email">Your Email</label>

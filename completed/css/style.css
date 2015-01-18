@@ -167,6 +167,20 @@
 	  https://developer.mozilla.org/en-US/docs/CSS/text-size-adjust 
 	  */
 
+
+
+/* ******************************************
+    Twitter Boostrap custom
+    ****************************************** */
+
+.span4 figure{
+	min-height: 15em;
+ max-height: 50em; 
+}
+
+/***************************************************/
+
+
 	  html {
 	  	font-size: 100%;
 	  	line-height: 1;
@@ -346,6 +360,7 @@
 	  	padding-bottom: 1.3em;
 	  }
 
+
 	  #portfolio h4 {
 	  	line-height: 1.82;
 	  }
@@ -454,6 +469,7 @@
 
 	img {
 		border: 0;
+		max-height: 70%;
 		-ms-interpolation-mode: bicubic;
 	}
 
@@ -554,17 +570,19 @@
     @media screen and (max-width: 45em) {
 
     	#container-header {
-    		background: #352a38 url("../img/bg-photo-s.jpg") no-repeat top center;
+    		background: #352a38 url("../img/head-s.png") no-repeat top center;
     		-webkit-background-size: cover;
     		-moz-background-size: cover;
     		background-size: cover;
-    		padding: 10% 0;
+    	
     	}
 
-    	#portfolio figure {
 
-    	}
+		#nav{
+			margin: 0 3%;
+		}
 
+    	
     	.pre{
     		font-size:1.063em;
     		position: relative; 
@@ -592,7 +610,10 @@
 
 		}
 		
-		#nav,
+		#nav{
+			margin: 0 3%;
+		}
+
 		#masthead,
 		#content,
 		#colophon {
@@ -600,11 +621,17 @@
 		}
 
 		#container-header {
-			background: #352a38 url("../img/bg-photo-l.jpg") no-repeat top center;
+			background: #352a38 url("../img/head-l.png") no-repeat top center;
 			padding: 5% 0;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			background-size: cover;
+
+		}
+
+		.opacity{
+			opacity: 0.5;
+            filter: alpha(opacity=50); /* For IE8 and earlier */
 		}
 
 		/* Navigation */
@@ -681,6 +708,14 @@
 		****************************************** */
 
 		@media screen and (min-width: 60em) {
+
+
+			#nav,
+			#masthead,
+			#content,
+			#colophon {
+				margin: 0 10%;
+			}
 
 			.name, .email {
 				padding-right: 1.3em;
@@ -814,7 +849,7 @@
     .ie .email,
     .ie input,
     .ie textarea {
-    	*behavior: url("http://www.absolute-path.com/js/boxsizing.htc");
+    	*behavior: url("http://sezargantous.herokuapp.com/js/boxsizing.htc");
     }
 
     /* Clearfix */
@@ -822,3 +857,4 @@
     .group {
     	*zoom: 1;
     }
+

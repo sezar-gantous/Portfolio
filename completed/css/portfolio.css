@@ -1,0 +1,17 @@
+#rightSide{
+	text-align: right;
+}
+
+#rightSide ul{
+	list-style: none;
+}
+
+.row-fluid section{
+	padding-bottom: 0.937em;
+}
+
+.row-fluid div
+{
+	margin-bottom: 1.3em;
+}
+
