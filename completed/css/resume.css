@@ -1,0 +1,12 @@
+.box {
+	max-width: 100%;
+}
+
+#ulPadding li{
+	padding-bottom: 0.625em;
+}
+
+#note{
+	color: #aaa;
+font-weight: 200;
+}

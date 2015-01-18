@@ -49,10 +49,10 @@
 				<!-- /Checkbox Hack markup -->
 				<nav>
 					<ul>
-						<li><a href="index.html">Home</a></li>
+						<li><a href="index.php">Home</a></li>
 						<li><a href="#portfolio">Portfolio</a></li>
 						<li><a href="#resume">Resume</a></li>
-						<li><a href="./">LinkedIn Profile</a></li> <!-- No destination yet -->
+						<li><a href="https://github.com/sezar-gantous?tab=repositories">My GitHub</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
