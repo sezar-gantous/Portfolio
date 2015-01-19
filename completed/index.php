@@ -150,7 +150,7 @@
 			
 			<header class="wrapper">
 				<h3>My Resume</h3>
-				<p> See Full Resume <a href="">here</a></p>
+				<p> See Full Resume <a href="resume.html">here</a></p>
 			</header>
 			<article class="wrapper">	
 				<div class="box">
