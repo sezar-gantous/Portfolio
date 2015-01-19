@@ -10,3 +10,38 @@
 	color: #aaa;
 font-weight: 200;
 }
+
+/* ******************************************
+	Print Styles
+	****************************************** */
+	@media print and (max-width: 8.5in){
+
+
+		#content{
+			width:100%;
+		}
+
+		#print {
+			text-align: right;
+		}
+
+	    #content,
+	    #container-content {
+		   margin: 0;
+			padding:0;	
+		   
+		}
+
+		.extraHeading{
+			display: none;
+		}
+
+
+		#container-header,
+		#container-footer	{
+			clear:both;
+			display: none;
+		}
+
+
+	}

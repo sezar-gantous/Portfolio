@@ -15,3 +15,54 @@
 	margin-bottom: 1.3em;
 }
 
+
+
+/* ******************************************
+	Print Styles
+	****************************************** */
+	@media print and (max-width: 8.5in){
+
+
+		img {
+			width:1.8in;
+			height: 1.8in;
+		}
+
+
+		#portfolio	{
+			width:100%;
+		}
+
+
+	    #portfolio,
+	    #container-content {
+		   margin-top: 0;
+			padding-top:0;	
+		   
+		}
+
+		.extraHeading{
+			display: none;
+		}
+
+		#printWidth div{
+			width: 100%;
+		}
+
+		#container-header,
+		#container-footer	{
+			clear:both;
+			display: none;
+		}
+
+
+	}
+	
+	/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
+
+	.group:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+		clear: both;
+	}
+
