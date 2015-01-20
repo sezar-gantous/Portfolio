@@ -3,7 +3,7 @@
 <!--[if !IE]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
-	<title>Sezar Gantous's portfolio</title>
+	<title>Sezar Gantous's online portfolio</title>
 
 	<!-- Viewport meta tag to prevent iPhone from scaling our page -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -102,7 +102,7 @@
 
 			<header>
 				<h3>My Portfolio</h3>
-				<p>
+				<p class="extraHeading">
 					Lastest Stuff. See Full Porfolio <a href="portfolio.html">here</a>
 				</p>
 			</header>
@@ -150,7 +150,7 @@
 			
 			<header class="wrapper">
 				<h3>My Resume</h3>
-				<p> See Full Resume <a href="resume.html">here</a></p>
+				<p class="extraHeading"> See Full Resume <a href="resume.html">here</a></p>
 			</header>
 			<article class="wrapper">	
 				<div class="box">
