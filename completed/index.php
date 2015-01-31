@@ -49,7 +49,7 @@
 				<!-- /Checkbox Hack markup -->
 				<nav>
 					<ul>
-						<li><a href="index.php">Home</a></li>
+						<li><a href="">Home</a></li>
 						<li><a href="#portfolio">Portfolio</a></li>
 						<li><a href="#resume">Resume</a></li>
 						<li><a href="https://github.com/sezar-gantous?tab=repositories">My GitHub</a></li>
@@ -160,7 +160,9 @@
 
 					<h6>Self-employed</h6>
 
-					<p>Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith.</p>
+					<p>
+						Designing and developing a responsive web site for Presidential Plantinum Limo - Toronto based limo service company.
+					</p>
 				</div>
 			</article>
 			<article class="wrapper">
