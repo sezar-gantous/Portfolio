@@ -114,7 +114,7 @@
 					<h4>Responsive Web Design Cetificate</h4>
 					<a href="https://dl.dropboxusercontent.com/u/63257278/Responsive_web_design_sezar_gantous.pdf">
 						<figure>
-							<img src="img/aquent2.png" alt="My AngularJS Work" />
+							<img src="img/aquent2.png" alt="Responsive Web Design Cetificate" />
 						</figure>
 					</a>
 				</article>
@@ -161,7 +161,7 @@
 					<h6>Self-employed</h6>
 
 					<p>
-						Designing and developing a responsive web site for Presidential Plantinum Limo - Toronto based limo service company.
+						Designing and developing a responsive web site for Tours Limo - Toronto based limo service company.
 					</p>
 				</div>
 			</article>
