@@ -301,6 +301,10 @@
 	  	overflow: hidden;
 	  }
 
+	  #printShowLink{
+	  	display: none;
+	  }
+
 	  /* Advanced Checkbox Hack */
 
 	  body { 
@@ -771,7 +775,9 @@
 			height: auto;
 		}
 */
-
+#printShowLink{
+	display: block;
+}
 
 		img {
 			width:1.8in;
@@ -792,6 +798,14 @@
 			float:right;
 			width:45%;
 		}
+
+		.box{
+			padding-top: -5.3em;
+		}
+        
+        h3{
+        	font-size: 1em;
+        }  
 
 		#resume,
 	    #portfolio,
