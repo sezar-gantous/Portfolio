@@ -108,6 +108,15 @@
 			</header>
 
 			<div class="row-fluid">
+				
+				<article class="span4">
+					<h4> Contract for Tours Limo Services</h4>
+					<a href="http://tourslimo.com">
+						<figure>
+							<img src="img/tourslimo.png" alt="Tours Limo Services" />
+						</figure>
+					</a>
+				</article>
 
 
 				<article class="span4">
@@ -128,14 +137,6 @@
 					</a>
 				</article>
 
-				<article class="span4">
-					<h4>My Windows Phone 8 Apps</h4>
-					<a href="http://www.windowsphone.com/en-ca/search?q=glassfrogapps#">
-						<figure>
-							<img src="img/wp8.png" alt="Windows Phone 8 Apps" />
-						</figure>
-					</a>
-				</article>
 
 
 			</div>
@@ -161,22 +162,24 @@
 					<h6>Self-employed</h6>
 
 					<p>
-						Designing and developing a responsive web site for Tours Limo - Toronto based limo service company.
+						Designing and developing a responsive E-commerce website for Soul over Swag - Toronto based Clothing line company.
 					</p>
 				</div>
 			</article>
-			<article class="wrapper">
+			<article class="wrapper">	
 				<div class="box">
 					<h4>Previously</h4>
 
-					<h5>Recent Grad</h5>
+					<h5>Web Developer</h5>
 
-					<h6>Seneca @ York University</h6>
+					<h6>Self-employed</h6>
 
-                    <h5>Computer programming and analysis</h5> 
-					<p>The program stresses practical applications of computer programming skills.</p>
+					<p>
+						Designed and developed a responsive website for Tours Limo Services - Toronto based limo service company.
+					</p>
 				</div>
 			</article>
+
 			<article class="wrapper">
 				<div class="box">
 					<h4>Comuper Languages</h4>
