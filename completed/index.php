@@ -110,6 +110,15 @@
 			<div class="row-fluid">
 				
 				<article class="span4">
+					<h4> Contract for Soul over Swag</h4>
+					<a href="http://souloverswag.com">
+						<figure>
+							<img src="img/souloverswag.png" alt="soul over swag" />
+						</figure>
+					</a>
+				</article>
+
+				<article class="span4">
 					<h4> Contract for Tours Limo Services</h4>
 					<a href="http://tourslimo.com">
 						<figure>
@@ -128,16 +137,7 @@
 					</a>
 				</article>
 
-				<article class="span4">
-					<h4>My Play Store Apps</h4>
-					<a href="https://play.google.com/store/search?q=glassfrogapps">
-						<figure>
-							<img src="img/android2.png" alt="Andriod Apps" />	
-						</figure> 
-					</a>
-				</article>
-
-
+				
 
 			</div>
 
@@ -159,7 +159,7 @@
 
 					<h5>Web Developer</h5>
 
-					<h6>Self-employed</h6>
+					<h6>Self-employed/Contract</h6>
 
 					<p>
 						Designing and developing a responsive E-commerce website for Soul over Swag - Toronto based Clothing line company.
@@ -172,7 +172,7 @@
 
 					<h5>Web Developer</h5>
 
-					<h6>Self-employed</h6>
+					<h6>Self-employed/Contract</h6>
 
 					<p>
 						Designed and developed a responsive website for Tours Limo Services - Toronto based limo service company.
