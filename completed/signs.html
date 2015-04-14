@@ -15,24 +15,56 @@
      li{
      	margin-bottom: 0.625em;
      }
+     header {
+ 		 margin-bottom: 2.625em;
+	 }
+   #err,#info{
+    display: none;
+   }
+   .remove,.pause, 
+   .play, .edit {
+    float: right;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #sites {
+    margin-top: 2.3em;
+  }
 	</style>
   </head>
   <body>
    <div class="container-fluid">
      <div class="row">
      	<div class="col-sm-12 col-md-6 col-md-offset-3">
-     		<form class="form" action="">
-  			  <div class="form-group">
-			    <label for="inputText">How do you say:</label>
-			    <input type="text" class="form-control" id="inputText" placeholder="Hello">
+     		<header>
+               <h2>Keep Heroku app alive</h2>
+               <h5>You can add or pause many apps</h5>
+     		</header>
+     		<form class="form">
+          <div class="form-group">
+          <label for="appName">App Name:</label>
+          <input type="text" class="form-control" id="appName" placeholder="full domain (include hhtp://)">
+        </div>  			  
+        <div class="form-group">
+			    <label for="url">Url:</label>
+			    <input type="text" class="form-control" id="url" placeholder="full url (include http:// or https://)">
 			  </div>
-			  <button type='button' id="search" class="btn btn-default">Search</button>
+        <div class="form-group">
+          <label for="intravel">Intravel:</label>
+          <input type="text" class="form-control" id="intravel" placeholder="intravel to wake up the dyno">
+        </div>
+			  <button type='button' id="awake" class="btn btn-default" onClick="wakeUp();">wake up!</button>
+        <div id="err" class="alert alert-danger" role="alert"></div>
+        <div id="info" class="alert alert-info" role="alert"> waking up the app! be patient on the dyno </div>
+
 			</form>
      	</div>
      </div>
      <div class="row">
      	<div class="col-sm-12 col-md-6 col-md-offset-3">
-     		<ul id="letters">
+     		<ul id="sites" class="list-group">
+          <li id="empty">No apps to wake up...</li>
      		</ul>
      		<h3 id="word"></h3>
      		<p id="extraInfo"></p>
@@ -44,298 +76,73 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
   	<script type="text/javascript">
+    var sites  = [];
+    var empty = '<li id="empty">No apps to wake up...</li>';
     $(document).ready(function() {
-    	
-var signs = ["@",
-"ABC's",
-"ABOUT",
-"ABOVE",
-"ABUSE",
-"ACCEPT",
-"ACCENT",
-"ACCIDENT",
-"accompany-[see WITH]",
-"accountant",
-"ACQUAINTANCE",
-"ACQUIRE",
-"ACROSS",
-"ACT",
-"ACTIVE",
-"ACTOR",
-"ADD",
-"ADDICT",
-"add-to",
-"ADDRESS",
-"administration-[see MANAGER]",
-"adopt-[see TAKE-UP]",
-"ADOPT",
-"ADULT",
-"advise/advice-[see COUNSEL]",
-"AFRAID-[scared]",
-"AFRICA",
-"AFTER",
-"AFTERNOON-[every afternoon]",
-"AGAIN-[repeat]",
-"AGAINST-[opposed/anti/con]",
-"AGENT",
-"AGGRESSIVE",
-"AGREE",
-"AIDE",
-"AIR",
-"AIRPLANE",
-"ALCOHOL",
-"ALCOHOLIC",
-"allergy",
-"ALL",
-"ALLIGATOR",
-"all-over/-dom-[see FIELD]",
-"ALLOW-[permit]",
-"almost-[see EASY]",
-"alone-[see SINGLE]",
-"A-LOT",
-"ALMOST",
-"ALOHA",
-"ALPHABET",
-"ALRIGHT",
-"ALSO",
-"ALTOGETHER-[total, sum]",
-"ALWAYS",
-"AM (not ASL)",
-"ambulance-[see LIGHT]",
-"AMERICA",
-"American",
-"American: Native American",
-"Amish",
-"AMOUNT",
-"an (not ASL)",
-"AND",
-"ANGEL",
-"ANGRY",
-"ANIMAL",
-"ANIMALS",
-"annually",
-"ANSWER",
-"ANT",
-"ANTHROPOLOGY",
-"ANY",
-"ANXIOUS",
-"APARTMENT",
-"APE",
-"APPEAR",
-"APPLAUSE",
-"APPLE",
-"APPLY",
-"APPOINTMENT",
-"APPRECIATE",
-"APPROXIMATELY",
-"ARE (Not ASL)",
-"AREA",
-"ARGUE",
-"ARIZONA",
-"ARMY",
-"around-[see APPROXIMATELY]",
-"ARRIVE",
-"art-[see DRAW]",
-"ARTHRITIS",
-"article/column-[see CL:C]",
-"ARTICLE-[column]",
-"ASK-[ask-to, inquire, request]",
-"ASSAULT",
-"ASSIGNMENT",
-"AT",
-"ATM",
-"ATLANTA",
-"ATTENTION",
-"AUDIENCE",
-"AUNT",
-"AUSTRALIA",
-"AUTISM",
-"AUTUMN",
-"AVERAGE",
-"AWAY",
-"AWESOME",
-"AWFUL-[terrible]",
-"AWKWARD-[clumsy]",
+        	
 
-"BABY (4)",
-"BABYSITTER",
-"BACHELOR",
-"BACK-[#BACK]",
-"BACKPACK",
-"BACK-STAB",
-"BAD",
-"BAG",
-"BAKE",
-"BALD",
-"BALL",
-"BALLOON",
-"BALTIMORE",
-"BANANA",
-"BANDAGE",
-"BANK-[#BANK-(lexicalized)]",
-"BAPTIZE",
-"BARBER",
-"BASEBALL",
-"BASEMENT",
-"BASKET",
-"BASKETBALL",
-"BAT",
-"BATHROOM",
-"BATHTUB",
-"BATTERY",
-"be-[ be verbs]",
-"BEACH",
-"BEAR",
-"BEARD",
-"BECOME",
-"because",
-"bed",
-"bed-go make your bed&quot",
-"BEDROOM",
-"BEE",
-"been",
-"BEER",
-"BEFORE",
-"begin / start",
-"BEHAVE",
-"BEHAVIOR",
-"behind-[see WITH]",
-"BELIEVE",
-"BELL",
-"BELLYBUTTON",
-"below",
-"BELT",
-"BENCH",
-"beneath-[see below]",
-"BERRY",
-"BEST",
-"BETTER",
-"between",
-"BICEPS",
-"BICYCLE-[bike, ride-bike]",
-"BIG/[SMALL]",
-"BINOCULARS",
-"BIRD",
-"BIRTH-[born]",
-"BIRTHDAY",
-"BITE",
-"BLACKBOARD",
-"BLAME-[fault, see",
-"BLANKET",
-"BLOCK",
-"BLOOD-draw-blood",
-"SHIRT",
-"BLUE",
-"BLUE-RAY",
-"BO STAFF",
-"BOAT",
-"BODY",
-"body-parts",
-"BOLD",
-"BOOK-[open book, close book, bookstore]",
-"BOOKSTORE",
-"boots",
-"BOUQUET",
-"BORED",
-"born",
-"LOAN",
-"BOSS",
-"BOSTON",
-"both",
-"bother",
-"CUP]",
-"bottom",
-"BOWEL MOVEMENT",
-"BOWL",
-"BOWLING",
-"bow-tie",
-"BOX",
-"BOY-[male, man]",
-"bracelet",
-"BRA",
-"BRAIN",
-"BRANCH",
-"BRAVE",
-"BREAD",
-"BREAK-[snap, pause]",
-"BREAK-DOWN",
-"BREAKFAST",
-"BREASTFEED",
-"BREATHE",
-"BRIDESMAID",
-"BRIDGE",
-"BRIGHT",
-"BRING-[carry]",
-"BROKE-(financially)",
-"BROTHER-[boy, male, man, same, right] ",
-"BROWN",
-"BROWN-2",
-"BRUISE",
-"BRUSH",
-"BRUSH-TEETH",
-"BS",
-"BUG",
-"BUILD",
-"BUILDING",
-"BULLY",
-"BUM",
-"BUNK-BED",
-"BURRITO",
-"BUS",
-"BUSINESS-[busy]",
-"BUSY-[#BUSY-(lexicalized)]",
-"BUT",
-"BUTTER",
-"BUTTERFLY",
-"BUTTON",
-"buy",
-"BUZZ-CUT",
-"BY",
-"BY-A-HAIR-[close!]","hello"];
-
-	$( "#inputText" ).autocomplete({
-      source: signs,
-      minLength:3
     });
 
-	/*$( "#inputText" ).on( "autocompleteselect", function( event, ui ) {
-		//alert(ui.item.value);
-	} );
-*/
-var words = {
-       "hello": "This text came from a map created in The javascript Thus we can look for a key and get its value...."
-};
+    function wakeUp () {
+      $("#info").show('fast');
 
-   		$('#search').click(function() {
-   	      //alert($('#inputText').val());
-   	      var str='';
-   	      var ext = '';
-          if ($('#inputText').val().length>0){
-          	$.map(($('#inputText').val()+ '').split(''),function(a,i){
-          		console.log("in");
-          	     
-          		if(a.toLowerCase() === 'j' || a.toLowerCase() === 'z' )
-          		{
-                     ext=".gif";
-          		}else{
-                      ext = '.png';
-          		}
-              str +='<li>'+a.toUpperCase()+'<img src="./img/'+a.toLowerCase()+ext+'" alt="asl letters" width="50"/> </li>';    
-          	});
-          	$('#letters').html(str);
-          	$('#word').html($('#inputText').val());
+      $.ajax($("#url").val())
+      .fail(function( jqXHR, textStatus){
+       /* It's not really working...???*/
+         console.dir("faild: "+jqXHR.status + "  "+ textStatus);
+        if(jqXHR.status === "200")
+        {
+          console.log("status:200");
+          print();
+        }
+      })
+      .done(function(){
+
+       print();
+      })
+      .always(function(){
+        $("#info").hide('fast');
+        print();
+      });
+    }
 
 
-          	if (words[$('#inputText').val().toLowerCase()]){
-          		$('#extraInfo').html('<img src="./img/icon-menu.png" />'+words[$('#inputText').val().toLowerCase()]);
-          	}
-          	else{
-          		$('#extraInfo').html("Sorry there wasn't an image found for " + $('#inputText').val());
-          	}
+    function startTimer() {
+        
+        sites.push( setInterval(function(){ wakeUp() }, 3480000) );
+        
+    }
 
-           }
-   		});
-    });
+    function pause(id) {
+        clearInterval(id);
+    }
+
+
+    function print () {
+     var str = '';
+     var url = $("#url").val();
+
+     str+= '<li id="li-'+ url +'" class="list-group-item">';
+     str+= '<a href="'+url+'" title="'+url+'">';
+     str+= $("#appName").val();
+     str+= '</a>'
+     str+= '<button id="pause-'+ url +'" class="alert alert-warning pause" title="pause app"> 
+              <span id="spanPause-'+ url +'" class="glyphicon glyphicon glyphicon-pause"></span> </button>';
+     str+= '<button id="edit-'+ url +'" class="alert alert-info edit" title="edit app">
+               <span id="spanEdit-'+ url +'" class="glyphicon glyphicon-pencil"></span> </button>';
+     str+= '<button id="remove-'+ url +'" class="alert alert-danger remove" title="delete app">
+                <span id="spanRemove-'+ url +'" class="glyphicon glyphicon-remove"></span> </button>';
+     str += '</li>';
+
+
+     $('#pause-'+ url).on('click',function(){
+
+     });
+
+
+      $("#sites").append(str);
+    }
+
   	</script>
   </body>
 </html>
