@@ -110,6 +110,15 @@
 			<div class="row-fluid">
 				
 				<article class="span4">
+					<h4>Contract for For My Munchkin</h4>
+					<a href="formymunchkin.herokuapp.com">
+						<figure>
+							<img src="img/fmm.png" alt="For My Munchkin" />
+						</figure>
+					</a>
+				</article>
+
+				<article class="span4">
 					<h4> Contract for Soul over Swag</h4>
 					<a href="http://souloverswag.com">
 						<figure>
@@ -123,16 +132,6 @@
 					<a href="http://tourslimo.com">
 						<figure>
 							<img src="img/tourslimo.png" alt="Tours Limo Services" />
-						</figure>
-					</a>
-				</article>
-
-
-				<article class="span4">
-					<h4>Responsive Web Design Cetificate</h4>
-					<a href="https://dl.dropboxusercontent.com/u/63257278/Responsive_web_design_sezar_gantous.pdf">
-						<figure>
-							<img src="img/aquent2.png" alt="Responsive Web Design Cetificate" />
 						</figure>
 					</a>
 				</article>
@@ -157,12 +156,12 @@
 				<div class="box">
 					<h4>Currently</h4>
 
-					<h5>Web Developer</h5>
+					<h5>Web App Developer</h5>
 
 					<h6>Self-employed/Contract</h6>
 
 					<p>
-						Designing and developing a responsive E-commerce website for Soul over Swag - Toronto based Clothing line company.
+						For My Munchkin is a small e-commerce responsive website. It will integrate Tumblr api as a "store front" and shopsite for payment e-commerce processing.
 					</p>
 				</div>
 			</article>
@@ -170,12 +169,12 @@
 				<div class="box">
 					<h4>Previously</h4>
 
-					<h5>Web Developer</h5>
+					<h5>Web App Developer</h5>
 
 					<h6>Self-employed/Contract</h6>
 
 					<p>
-						Designed and developed a responsive website for Tours Limo Services - Toronto based limo service company.
+						Designing and developing a responsive E-commerce website for Soul over Swag - Toronto based Clothing line company.
 					</p>
 				</div>
 			</article>

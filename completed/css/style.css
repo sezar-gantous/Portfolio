@@ -825,6 +825,11 @@
 		}
 
 
+		article#tech p {
+		  font-size: small;
+		}
+
+
 	}
 	
 	/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
