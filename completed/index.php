@@ -111,7 +111,7 @@
 				
 				<article class="span4">
 					<h4>Contract for For My Munchkin</h4>
-					<a href="formymunchkin.herokuapp.com">
+					<a href="http://formymunchkin.herokuapp.com">
 						<figure>
 							<img src="img/fmm.png" alt="For My Munchkin" />
 						</figure>
@@ -120,7 +120,7 @@
 
 				<article class="span4">
 					<h4> Contract for Soul over Swag</h4>
-					<a href="http://souloverswag.com">
+					<a href="http://souloverswag.herokuapp.com">
 						<figure>
 							<img src="img/souloverswag.png" alt="soul over swag" />
 						</figure>
