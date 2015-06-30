@@ -111,7 +111,7 @@
 				
 				<article class="span4">
 					<h4>Contract for For My Munchkin</h4>
-					<a href="http://formymunchkin.herokuapp.com">
+					<a target="_blank" href="http://formymunchkin.com">
 						<figure>
 							<img src="img/fmm.png" alt="For My Munchkin" />
 						</figure>
@@ -120,7 +120,7 @@
 
 				<article class="span4">
 					<h4> Contract for Soul over Swag</h4>
-					<a href="http://souloverswag.herokuapp.com">
+					<a target="_blank" href="http://souloverswag.com">
 						<figure>
 							<img src="img/souloverswag.png" alt="soul over swag" />
 						</figure>
@@ -129,7 +129,7 @@
 
 				<article class="span4">
 					<h4> Contract for Tours Limo Services</h4>
-					<a href="http://tourslimo.com">
+					<a target="_blank" href="http://tourslimo.com">
 						<figure>
 							<img src="img/tourslimo.png" alt="Tours Limo Services" />
 						</figure>
