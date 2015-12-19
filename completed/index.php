@@ -110,8 +110,17 @@
 			<div class="row-fluid">
 				
 				<article class="span4">
+					<h4>Contract for Atlantic Courier &amp; Cartage LTD</h4>
+					<a target="_blank" href="http://atlanticcourier.ca/">
+						<figure>
+							<img src="img/atlanticcourier.png" alt="Atlantic Courier &amp; Cartage LTD" />
+						</figure>
+					</a>
+					</article>
+				
+				<article class="span4">
 					<h4>Contract for For My Munchkin</h4>
-					<a target="_blank" href="http://formymunchkin.com">
+					<a target="_blank" href="http://fmm.souloverswag.com">
 						<figure>
 							<img src="img/fmm.png" alt="For My Munchkin" />
 						</figure>
@@ -125,18 +134,7 @@
 							<img src="img/souloverswag.png" alt="soul over swag" />
 						</figure>
 					</a>
-				</article>
-
-				<article class="span4">
-					<h4> Contract for Tours Limo Services</h4>
-					<a target="_blank" href="http://tourslimo.com">
-						<figure>
-							<img src="img/tourslimo.png" alt="Tours Limo Services" />
-						</figure>
-					</a>
-				</article>
-
-				
+				</article>		
 
 			</div>
 
@@ -156,25 +154,27 @@
 				<div class="box">
 					<h4>Currently</h4>
 
-					<h5>Web App Developer</h5>
+					<h5>Full Stack Web Developer</h5>
 
-					<h6>Self-employed/Contract</h6>
+					<h6>Contract - Diversified Communications Canada</h6>
 
 					<p>
-						For My Munchkin is a small e-commerce responsive website. It will integrate Tumblr api as a "store front" and shopsite for payment e-commerce processing.
+						Working with the Development/IT Team on a new platform. Main responsibility is developing modules and plugins for all current joomla sites that will bridge with the new system. Furthermore, other responsibilities includes creating a new responsive user interface and modern user experience.
 					</p>
 				</div>
 			</article>
 			<article class="wrapper">	
 				<div class="box">
-					<h4>Previously</h4>
+				<div class="box">
+					<h4>Sep 2015 - Nov 2015</h4>
 
 					<h5>Web App Developer</h5>
 
-					<h6>Self-employed/Contract</h6>
+					<h6>Contract - Atlantic Courier &amp; Cartage LTD</h6>
 
 					<p>
-						Designing and developing a responsive E-commerce website for Soul over Swag - Toronto based Clothing line company.
+						Building a new, updated web site in which it will be responsive and follows Agile mothology.
+	      				It also includes setting up caching, domain, hosting and SEO.
 					</p>
 				</div>
 			</article>
